@@ -1,5 +1,13 @@
 #container {
+    display: flex;
     border: 5px solid black;
     width: 800px;
     height: 800px;
+    flex-wrap: wrap;
+}
+
+.canvas {
+    box-sizing: border-box;
+    display: flex;
+    flex: none;
 }
