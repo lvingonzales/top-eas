@@ -1,0 +1,3 @@
+const CONTAINER_LENGTH = 800;
+
+console.log (CONTAINER_LENGTH);
