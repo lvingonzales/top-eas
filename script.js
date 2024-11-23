@@ -7,7 +7,7 @@ resetButton.addEventListener("click", resetCanvas);
 
 header.style.width = (CONTAINER_LENGTH + 10) + 'px';
 
-
+let penOpacity = 0.1;
 let canvasSize = 16;
 let canvasArea;
 let canvasLength;
@@ -26,8 +26,10 @@ function createGrid() {
         newSquare.setAttribute("class", "canvas");
         newSquare.style.height = canvasLength + 'px';
         newSquare.style.width = canvasLength + 'px';
+        newSquare.style.opacity = penOpacity;
         newSquare.addEventListener("mouseover", () => {
-            newSquare.style.backgroundColor = 'blue';
+            newSquare.style.backgroundColor = 'black';
+            newSquare.style.opacity = parseFloat(newSquare.style.opacity) + parseFloat(penOpacity);
         });
         canvasSquares.push(newSquare);
     }
@@ -52,8 +54,6 @@ function resetCanvas () {
 
     drawCanvas()
 }
-
-
 
 drawCanvas();
 
